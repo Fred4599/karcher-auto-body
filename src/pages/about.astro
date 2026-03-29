@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const differentiators = [
+  {
+    title: 'Owner-Accessible Service',
+    desc: "Erick isn't a name on a wall — he's in the shop. You'll talk to the person who is accountable for your repair, every time.",
+  },
+  {
+    title: 'I-CAR Trained Technicians',
+    desc: "Our technicians are certified to the industry's standards. We invest in training so you get repairs that meet or exceed manufacturer specifications.",
+  },
+  {
+    title: '50+ Years of Combined Experience',
+    desc: "Decades of hands-on experience with every make, model, and type of damage. There's very little we haven't seen — or fixed.",
+  },
+  {
+    title: 'Honest, Transparent Process',
+    desc: "We walk you through what needs to be done, explain the options, and keep you updated throughout. No guessing, no surprises.",
+  },
+  {
+    title: 'All Makes & Models',
+    desc: "Domestic or import, daily driver or project car — we work on everything. We also serve local dealerships and fleet accounts.",
+  },
+  {
+    title: 'Community Invested',
+    desc: "Members of both the Nampa and Caldwell Chambers of Commerce. We're neighbors first, business second.",
+  },
+];
+---
+
+<Layout
+  title="About Us"
+  description="Karcher Auto Body — More than a body shop, we're your neighbors. Family owned, I-CAR trained, serving the Treasure Valley with integrity and skill."
+>
+  <Nav />
+
+  <!-- Page Hero -->
+  <section class="bg-brand-dark pt-32 pb-20 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gold/5 to-transparent pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="text-gold text-xs font-bold uppercase tracking-widest">About Karcher Auto Body</span>
+        <h1 class="text-5xl sm:text-6xl font-black text-white mt-3 mb-6 leading-tight">
+          More Than a Body Shop —<br />
+          <span class="text-gold">We're Your Neighbors</span>
+        </h1>
+        <p class="text-xl text-white/60 leading-relaxed">
+          Serving the Treasure Valley with integrity, skill, and genuine care for every car and customer we touch.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold divider -->
+  <div class="h-1 bg-gold"></div>
+
+  <!-- Our Story -->
+  <section class="bg-brand-surface py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-gold text-xs font-bold uppercase tracking-widest">Our Story</span>
+          <h2 class="text-4xl sm:text-5xl font-black text-white mt-3 mb-6 leading-tight">
+            Built on Experience.<br />Driven by Pride.
+          </h2>
+          <div class="space-y-4 text-white/60 leading-relaxed">
+            <p>
+              Karcher Auto Body has been a fixture in the Nampa community for years — built on the simple idea that great auto body work and honest service should go hand in hand.
+            </p>
+            <p>
+              What started as a commitment to quality has grown into a team with more than 50 years of combined technician experience, a reputation that speaks for itself, and a shop that local car owners, dealerships, and fleet managers trust to get it right.
+            </p>
+            <p>
+              We're not a franchise or a corporate chain. We're a family-owned shop, and that means the person answering your call is the same person making sure your car leaves looking perfect.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stats panel -->
+        <div class="bg-brand-card border border-white/5 rounded-3xl p-10">
+          <div class="grid grid-cols-2 gap-8">
+            {[
+              { value: '50+', label: 'Years of combined technician experience' },
+              { value: '5★', label: 'Star rated by customers across the Treasure Valley' },
+              { value: '100%', label: 'Family owned and personally managed' },
+              { value: 'All', label: 'Makes and models accepted' },
+            ].map(stat => (
+              <div>
+                <div class="text-4xl font-black text-gold mb-2">{stat.value}</div>
+                <p class="text-white/50 text-sm leading-snug">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team -->
+  <section class="bg-brand-dark py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Photo placeholder -->
+        <div class="order-2 lg:order-1 bg-brand-surface border border-white/10 rounded-3xl aspect-[4/3] flex items-center justify-center">
+          <div class="text-center p-8">
+            <div class="w-24 h-24 bg-gold/10 border border-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-12 h-12 text-gold/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <p class="text-white/30 text-sm">Team photo coming soon</p>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <span class="text-gold text-xs font-bold uppercase tracking-widest">The Team</span>
+          <h2 class="text-4xl sm:text-5xl font-black text-white mt-3 mb-6 leading-tight">
+            Meet Erick and the Karcher Team
+          </h2>
+          <div class="space-y-4 text-white/60 leading-relaxed">
+            <p>
+              Owner Erick leads Karcher Auto Body with the same hands-on approach he's always had — present in the shop, accessible to customers, and personally invested in every vehicle that comes through the door.
+            </p>
+            <p>
+              If you've read our reviews, you've probably seen his name. That's intentional.
+            </p>
+            <p>
+              Behind Erick is a team of I-CAR trained technicians who bring precision, professionalism, and genuine craftsmanship to every repair. Whether it's a minor dent or major collision work, you're in experienced hands.
+            </p>
+          </div>
+
+          <div class="mt-8 flex items-center gap-4">
+            <a
+              href="tel:+12084639090"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-brand-red text-white font-bold uppercase tracking-wide rounded-[10px] hover:bg-red-700 transition-colors text-sm"
+            >
+              Call Us Today
+            </a>
+            <a href="/services" class="text-gold font-semibold text-sm hover:underline inline-flex items-center gap-1">
+              View Our Services
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes Us Different -->
+  <section class="bg-brand-surface py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-gold text-xs font-bold uppercase tracking-widest">Our Difference</span>
+        <h2 class="text-4xl sm:text-5xl font-black text-white mt-3">What Makes Us Different</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {differentiators.map(item => (
+          <div class="bg-brand-card border border-white/5 rounded-2xl p-8 hover:border-gold/20 transition-all">
+            <div class="w-10 h-10 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+              <div class="w-2 h-2 bg-gold rounded-full"></div>
+            </div>
+            <h3 class="text-white font-bold text-lg mb-2">{item.title}</h3>
+            <p class="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="bg-brand-dark py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-gold text-xs font-bold uppercase tracking-widest">Community</span>
+      <h2 class="text-4xl sm:text-5xl font-black text-white mt-3 mb-6">Proud to Serve the Treasure Valley</h2>
+      <p class="text-white/60 text-lg leading-relaxed mb-4">
+        Karcher Auto Body is a proud member of both the Nampa Chamber of Commerce and the Caldwell Chamber of Commerce. We're invested in this community — not just as a business, but as neighbors who care about where we live and work.
+      </p>
+      <p class="text-white/50 leading-relaxed mb-10">
+        When you bring your car to us, you're supporting a local business that supports this community right back.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/contact"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-brand-red text-white font-bold uppercase tracking-wide rounded-[10px] hover:bg-red-700 transition-colors text-sm"
+        >
+          Get a Free Estimate
+        </a>
+        <a
+          href="/services"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-semibold rounded-[10px] hover:border-gold hover:text-gold transition-all text-sm"
+        >
+          View Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
