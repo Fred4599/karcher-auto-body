@@ -103,16 +103,13 @@ const differentiators = [
   <section class="bg-brand-dark py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <!-- Photo placeholder -->
-        <div class="order-2 lg:order-1 bg-brand-surface border border-white/10 rounded-3xl aspect-[4/3] flex items-center justify-center">
-          <div class="text-center p-8">
-            <div class="w-24 h-24 bg-gold/10 border border-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-12 h-12 text-gold/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <p class="text-white/30 text-sm">Team photo coming soon</p>
-          </div>
+        <!-- Team photo -->
+        <div class="order-2 lg:order-1 rounded-3xl overflow-hidden aspect-[4/3]">
+          <img
+            src="/images/about-team.jpg"
+            alt="Karcher Auto Body team — owner and technicians"
+            class="w-full h-full object-cover object-center"
+          />
         </div>
 
         <div class="order-1 lg:order-2">

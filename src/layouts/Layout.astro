@@ -6,7 +6,7 @@ export interface Props {
 
 const { title, description = "Karcher Auto Body — Nampa's trusted collision repair and auto body shop. I-CAR trained technicians, 50+ years combined experience. Free estimates." } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://karcherautobody.com');
-const ogImage = 'https://karcherautobody.com/userdata/remo61/media/uploads/images/footerlogo.png';
+const ogImage = (Astro.site ? new URL('/images/og-image.jpg', Astro.site).href : 'https://karcherautobody.com/images/og-image.jpg');
 const fullTitle = `${title} | Karcher Auto Body`;
 
 const localBusinessSchema = {

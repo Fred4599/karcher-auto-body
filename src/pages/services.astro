@@ -11,6 +11,7 @@ const services = [
     body: "Our technicians handle everything from surface panel repairs to complex structural work, working with all makes and models. We also work with most insurance carriers to keep the process smooth.",
     forWho: "Anyone dealing with accident damage, regardless of severity.",
     result: "A complete repair that looks and performs like nothing happened.",
+    image: "/images/service-collision-repair.jpg",
     icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9" /></svg>`,
   },
   {
@@ -20,6 +21,7 @@ const services = [
     body: "Our team delivers precise color matching and flawless application on everything from single panels to full vehicle resprays.",
     forWho: "Vehicles needing paint repair after damage, fading, or scratching — or anyone ready for a color refresh.",
     result: "A factory-quality finish that holds up over time.",
+    image: "/images/service-auto-painting.jpg",
     icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>`,
   },
   {
@@ -29,6 +31,7 @@ const services = [
     body: "We use professional frame repair equipment to restore your vehicle's geometry to manufacturer specifications.",
     forWho: "Vehicles with structural damage from moderate-to-severe collisions.",
     result: "A safe, properly aligned vehicle — not just a cosmetically repaired one.",
+    image: "/images/service-frame-unibody-repair.jpg",
     icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>`,
   },
   {
@@ -47,6 +50,7 @@ const services = [
     body: "No filler, no repainting — just precise, technique-driven repair that preserves your factory finish.",
     forWho: "Vehicles with hail damage, parking lot dings, or minor dents where the paint is intact.",
     result: "Dent-free panels without the cost or time of conventional repair.",
+    image: "/images/service-paintless-dent-removal.jpg",
     icon: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`,
   },
   {
@@ -134,8 +138,17 @@ const services = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="space-y-6">
         {services.map((service, i) => (
-          <div id={service.id} class="group bg-brand-surface border border-white/5 rounded-2xl p-8 hover:border-gold/20 transition-all">
-            <div class="grid lg:grid-cols-3 gap-8 items-start">
+          <div id={service.id} class="group bg-brand-surface border border-white/5 rounded-2xl overflow-hidden hover:border-gold/20 transition-all">
+            {service.image && (
+              <div class="h-48 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title + ' — Karcher Auto Body'}
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            )}
+            <div class={`grid lg:grid-cols-3 gap-8 items-start p-8`}>
               <!-- Title & Icon -->
               <div class="lg:col-span-1">
                 <div class="text-gold mb-4" set:html={service.icon} />
